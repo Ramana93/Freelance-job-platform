@@ -1,0 +1,230 @@
+/* 🎯 Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #0d0d0d;    /* Black Background */
+    color: #f0f0f0;         /* Light text color */
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  /* 🎯 Navbar */
+  .navbar {
+    background: #1a1a1a;  
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 60px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+    transition: all 0.3s ease;
+  }
+  
+  .navbar h1 {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  .navbar a {
+    color: #f0f0f0;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+    transition: color 0.3s, transform 0.3s;
+  }
+  
+  .navbar a:hover {
+    color: #00ffcc;      /* Neon hover color */
+    transform: scale(1.1);
+  }
+  
+  /* 🎯 Main Container */
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+  }
+  
+  /* 🎯 Gig Card */
+  .card {
+    background: #1c1c1c;  
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(0, 255, 204, 0.3);
+  }
+  
+  .card h3 {
+    font-size: 24px;
+    color: #00ffcc;   
+    margin-bottom: 15px;
+  }
+  
+  .card p {
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: #cccccc;
+  }
+  
+  /* 🎯 Buttons */
+  .card .btn {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 16px;
+    color: #0d0d0d;
+    background: #00ffcc;  
+    text-decoration: none;
+    border-radius: 30px;
+    transition: all 0.3s;
+    margin-right: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .card .btn:hover {
+    background: #ffcc00;   
+    color: #000;
+    transform: scale(1.05);
+  }
+  
+  .card .btn-primary {
+    background: #ff5733;  
+  }
+  
+  .card .btn-primary:hover {
+    background: #ffcc00;  
+  }
+  
+  /* 🎯 Footer */
+  .footer {
+    background: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 14px;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.8);
+  }
+  
+  /* 🎯 Responsive Design */
+  @media (max-width: 1024px) {
+    .navbar {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .navbar a {
+      margin: 10px 0;
+    }
+  
+    .container {
+      padding: 20px;
+    }
+  
+    .card {
+      padding: 20px;
+    }
+  }
+/* 🎯 Filter Container */
+.filter-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 15px 20px;
+    background: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* 🎯 Search Bar */
+  .search-bar {
+    padding: 10px 20px;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background: #0d0d0d;
+    color: #00ffcc;
+    transition: all 0.3s ease;
+  }
+  
+  .search-bar:focus {
+    box-shadow: 0 0 8px #00ffcc;
+  }
+  
+  /* 🎯 Sorting Dropdown */
+  .sort-dropdown {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #00ffcc;
+    color: #0d0d0d;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .sort-dropdown:hover {
+    background: #ffcc00;
+  }
+  
+  /* 🎯 Pagination */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+  }
+  
+  .pagination li {
+    margin: 0 8px;
+  }
+  
+  .pagination a {
+    color: #00ffcc;
+    padding: 10px 15px;
+    text-decoration: none;
+    transition: all 0.3s;
+    background: #1a1a1a;
+    border-radius: 5px;
+  }
+  
+  .pagination a:hover {
+    background: #ff5733;
+    color: #fff;
+  }
+  
+  .pagination .active a {
+    background: #ffcc00;
+    color: #000;
+  }
+  
+  /* 🎯 Responsive Design */
+  @media (max-width: 768px) {
+    .filter-container {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .search-bar, .sort-dropdown {
+      width: 100%;
+    }
+  }
+    
